@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CMD 指令</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2 {
+            color: #0073e6;
+        }
+        ul {
+            line-height: 1.8;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .command-list {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .command-list h3 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CMD 指令</h1>
+    <p>CMD 指令及用途</p>
+</header>
+
+<div class="container">
+
+    <div class="command-list">
+        <h3>1. <code>ipconfig</code></h3>
+        <p>顯示當前電腦的 IP 配置信息</p>
+        <p><strong>常用參數：</strong></p>
+        <ul>
+            <li><code>/all</code>：顯示所有網路適配器的詳細信息。</li>
+            <li><code>/release</code>：釋放當前的 DHCP 地址。</li>
+            <li><code>/renew</code>：請求新的 DHCP 地址。</li>
+            <li><code>/flushdns</code>：清除 DNS 解析緩存。</li>
+        </ul>
+    </div>
+
+    <div class="command-list">
+        <h3>2. <code>ping</code></h3>
+        <p>透過向目標地址發送 ICMP 請求，測試與該地址的網路連通性</p>
+        <p><strong>常用參數：</strong></p>
+        <ul>
+            <li><code>-t</code>：持續發送 ping 請求，直到手動停止。</li>
+            <li><code>-n</code>：指定發送的請求次數。</li>
+        </ul>
+    </div>
+
+    <div class="command-list">
+        <h3>3. <code>tracert</code></h3>
+        <p>追蹤資料包到達目標主機的路徑，顯示每跳路由的信息</p>
+        <p><strong>常用參數：</strong></p>
+        <ul>
+            <li><code>-d</code>：直接顯示 IP 地址，而不進行域名解析。</li>
+        </ul>
+    </div>
+
+    <div class="command-list">
+        <h3>4. <code>netstat</code></h3>
+        <p>顯示網路連接、路由表和網路介面的統計信息</p>
+        <p><strong>常用參數：</strong></p>
+        <ul>
+            <li><code>-a</code>：顯示所有連接和監聽端口。</li>
+            <li><code>-n</code>：以數字形式顯示地址和端口號，而不解析域名。</li>
+            <li><code>-o</code>：顯示與每個連接相關聯的進程ID（PID）。</li>
+            <li><code>-b</code>：顯示與每個連接相關聯的可執行程序（需要管理員權限）。</li>
+        </ul>
+    </div>
+
+    <div class="command-list">
+        <h3>5. <code>nslookup</code></h3>
+        <p>用於查詢域名系統，可以查詢域名的 IP 地址，或查詢與特定 IP 地址相關的域名</p>
+    </div>
+
+    <div class="command-list">
+        <h3>6. <code>netsh</code></h3>
+        <p>配置網路設置，可以進行網路適配器設置、更改防火牆規則、配置網路共享</p>
+        <p><strong>常用參數：</strong></p>
+        <ul>
+            <li><code>interface</code>：用於配置網路介面的設置。</li>
+            <li><code>firewall</code>：用於設置防火牆規則。</li>
+        </ul>
+    </div>
+
+    <div class="command-list">
+        <h3>7. <code>net</code></h3>
+        <p>用於網路資源管理，包括共享資料夾、打印機、網路用戶</p>
+        <p><strong>常用參數：</strong></p>
+        <ul>
+            <li><code>user</code>：顯示或管理用戶帳戶。</li>
+            <li><code>view</code>：查看共享資源。</li>
+            <li><code>share</code>：管理資料夾共享。</li>
+        </ul>
+    </div>
+
+    <div class="command-list">
+        <h3>8. <code>route</code></h3>
+        <p>顯示或修改計算機的路由表</p>
+        <p><strong>常用參數：</strong></p>
+        <ul>
+            <li><code>print</code>：顯示當前路由表。</li>
+            <li><code>add</code>：添加路由。</li>
+            <li><code>delete</code>：刪除路由。</li>
+        </ul>
+    </div>
+
+    <div class="command-list">
+        <h3>9. <code>arp</code></h3>
+        <p>顯示或修改計算機的 ARP 緩存，用於查看 IP 地址與MAC 地址之間的關係</p>
+        <p><strong>常用參數：</strong></p>
+        <ul>
+            <li><code>-a</code>：顯示 ARP 緩存。</li>
+            <li><code>-d</code>：刪除 ARP 緩存中的某項條目。</li>
+            <li><code>-s</code>：為某個 IP 地址添加靜態 ARP 緩存條目。</li>
+        </ul>
+    </div>
+
+    <div class="command-list">
+        <h3>10. <code>telnet</code></h3>
+        <p>透過 Telnet 協議連接到遠端計連線。</p>
+    </div>
+
+</div>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
